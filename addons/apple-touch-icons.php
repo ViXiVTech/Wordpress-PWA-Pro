@@ -4,7 +4,7 @@
  *
  * @since 1.8
  * 
- * @function	superpwa_ati_add_apple_touch_icons()	Add Apple Touch Icons to the wp_head
+ * @function	pwapro_ati_add_apple_touch_icons()	Add Apple Touch Icons to the wp_head
  */
 
 // Exit if accessed directly
@@ -13,19 +13,19 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Add Apple Touch Icons to the wp_head
  * 
- * Uses the Application Icon and Splash Screen Icon for SuperPWA > Settings
- * and adds them to wp_head using the superpwa_wp_head_tags filter.
+ * Uses the Application Icon and Splash Screen Icon for PWA Pro > Settings
+ * and adds them to wp_head using the pwapro_wp_head_tags filter.
  * 
- * @param (string) $tags HTML element tags passed on by superpwa_wp_head_tags
+ * @param (string) $tags HTML element tags passed on by pwapro_wp_head_tags
  * 
  * @return (string) Appends the Apple Touch Icons to the existing tag string
  * 
  * @since 1.8
  */
-function superpwa_ati_add_apple_touch_icons( $tags ) {
+function pwapro_ati_add_apple_touch_icons( $tags ) {
 	
-	// Get the icons added via SuperPWA > Settings
-	$icons = superpwa_get_pwa_icons();
+	// Get the icons added via PWA Pro > Settings
+	$icons = pwapro_get_pwa_icons();
 	
 	foreach( $icons as $icon ) {
 		$tags .= '<link rel="apple-touch-icon" sizes="' . $icon['sizes'] . '" href="' . $icon['src'] . '">' . PHP_EOL;
@@ -33,4 +33,4 @@ function superpwa_ati_add_apple_touch_icons( $tags ) {
 	
 	return $tags;
 }
-add_filter( 'superpwa_wp_head_tags', 'superpwa_ati_add_apple_touch_icons' );
+add_filter( 'pwapro_wp_head_tags', 'pwapro_ati_add_apple_touch_icons' );

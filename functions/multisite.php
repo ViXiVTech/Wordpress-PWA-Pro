@@ -47,7 +47,7 @@ function pwapro_multisite_activation_status( $status ) {
 		return;
 	}
 	
-	// Get current list of sites where SuperPWA is activated.
+	// Get current list of sites where PWA Pro is activated.
 	$pwapro_sites = get_site_option( 'pwapro_active_sites', array() );
 	
 	// Set the status for the current blog.
@@ -64,7 +64,7 @@ function pwapro_multisite_activation_status( $status ) {
  * Sets the deactivation status for each site.
  *
  * Not used when wp_is_large_network() is true. Deleting that many files and db options will most likely time out. 
- * This also this gives the user an option to decide if SuperPWA should handle this by changing the defenition of wp_is_large_network.
+ * This also this gives the user an option to decide if PWA Pro should handle this by changing the defenition of wp_is_large_network.
  * @link https://developer.wordpress.org/reference/functions/wp_is_large_network/
  */
 function pwapro_multisite_network_deactivator() {
@@ -74,7 +74,7 @@ function pwapro_multisite_network_deactivator() {
 		return;
 	}
 	
-	// Retrieve the list of blog ids where SuperPWA is active. (saved with blog_id as $key and activation_status as $value)
+	// Retrieve the list of blog ids where PWA Pro is active. (saved with blog_id as $key and activation_status as $value)
 	$pwapro_sites = get_site_option( 'pwapro_active_sites' );
 	
 	// Loop through each active site.
@@ -90,10 +90,10 @@ function pwapro_multisite_network_deactivator() {
 		pwapro_delete_sw();
 		
 		/**
-		 * Delete SuperPWA version info for current blog.
+		 * Delete PWA Pro version info for current blog.
 		 * 
 		 * This is required so that pwapro_upgrader() will run and create the manifest and service worker on next activation.
-		 * Known edge case: Database upgrade that relies on the version number will fail if user deactivates and later activates after SuperPWA is updated.
+		 * Known edge case: Database upgrade that relies on the version number will fail if user deactivates and later activates after PWA Pro is updated.
 		 */
 		delete_option( 'pwapro_version' );
 	

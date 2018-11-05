@@ -1,6 +1,6 @@
 <?php
 /**
- * Operations and common functions of SuperPWA
+ * Operations and common functions of PWA Pro
  *
  * @since 1.0
  * 
@@ -67,7 +67,7 @@ function pwapro_is_amp() {
  * @since 1.3.1 Force HTTPS by replacing http:// with https://
  * @since 1.6 Use pwapro_httpsify() to force HTTPS. 
  * @since 1.6 Removed forcing of trailing slash and added dot (.) to the beginning.
- * @since 1.7 Added filter pwapro_manifest_start_url when $rel = true, for use with manifest. First ever filter in SuperPWA.
+ * @since 1.7 Added filter pwapro_manifest_start_url when $rel = true, for use with manifest. First ever filter in PWA Pro.
  */
 function pwapro_get_start_url( $rel = false ) {
 	

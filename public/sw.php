@@ -1,6 +1,6 @@
 <?php
 /**
- * Service worker related functions of SuperPWA
+ * Service worker related functions of PWA Pro
  *
  * @since 1.0
  * 
@@ -21,9 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * For Multisite compatibility. Used to be constants defined in pwapro.php
  * On a multisite, each sub-site needs a different service worker.
  *
- * @param $arg 	filename for service worker filename (replaces SUPERPWA_SW_FILENAME)
- *				abs for absolute path to service worker (replaces SUPERPWA_SW_ABS)
- *				src for relative link to service worker (replaces SUPERPWA_SW_SRC). Default value
+ * @param $arg 	filename for service worker filename (replaces PWAPRO_SW_FILENAME)
+ *				abs for absolute path to service worker (replaces PWAPRO_SW_ABS)
+ *				src for relative link to service worker (replaces PWAPRO_SW_SRC). Default value
  *
  * @return (string) filename, absolute path or link to manifest.
  * 
@@ -96,111 +96,213 @@ function pwapro_sw_template() {
 	
 	// Start output buffer. Everything from here till ob_get_clean() is returned
 	ob_start();  ?>
+
 'use strict';
 
 /**
- * Service Worker of SuperPWA
+ * Service Worker of PWA Pro
  * To learn more and add one to your website, visit - https://pwapro.com
  */
  
-const cacheName = '<?php echo parse_url( get_bloginfo( 'wpurl' ), PHP_URL_HOST ) . '-pwapro-' . SUPERPWA_VERSION; ?>';
-const startPage = '<?php echo pwapro_get_start_url(); ?>';
-const offlinePage = '<?php echo get_permalink( $settings['offline_page'] ) ? pwapro_httpsify( get_permalink( $settings['offline_page'] ) ) : pwapro_httpsify( get_bloginfo( 'wpurl' ) ); ?>';
-const filesToCache = [<?php echo apply_filters( 'pwapro_sw_files_to_cache', 'startPage, offlinePage' ); ?>];
-const neverCacheUrls = [<?php echo apply_filters( 'pwapro_sw_never_cache_urls', '/\/wp-admin/,/\/wp-login/,/preview=true/' ); ?>];
+//This is an advanced service worker with dynamic caching through site message communication
+var CACHE = 'ViXiV-DynamicCache';
+const OFFLINE = 'offline.html';
 
-// Install
-self.addEventListener('install', function(e) {
-	console.log('SuperPWA service worker installation');
-	e.waitUntil(
-		caches.open(cacheName).then(function(cache) {
-			console.log('SuperPWA service worker caching dependencies');
-			filesToCache.map(function(url) {
-				return cache.add(url).catch(function (reason) {
-					return console.log('SuperPWA: ' + String(reason) + ' ' + url);
-				});
-			});
-		})
-	);
+var network = ['data:', 'subscriptions', 'ping', 'mailbox/api/ping', 'piwik', 'google', 'youtube', 'facebook', 'admin', 'login', 'logout', 'sign-out', 'sign-in', 'simplicity', 'base', 'index', 'main', 
+'dashboard', 'simplicity', 'upload', 'submit', 'post', 'delete', 'latest', 'return', 'ytimg'];
+
+var blacklist = ['oxpwa.js', 'service_worker.js', 'manifest'];
+var CacheFiles = [];
+
+CacheOriginal = CacheFiles;
+
+self.addEventListener('message', function(event) {
+	data = event.data;
+	CacheFiles = CacheOriginal;
+        data.Cache_Files.forEach(function(item) {
+		var l1 = 0; l2 = 0;
+		for (l1 = 0; l1 < blacklist.length; l1++) {
+			if (item.indexOf(blacklist[l1]) !== -1) { return; }
+		}
+                for (l2 = 0; l2 < network.length; l2++) {
+                        if (item.indexOf(network[l2]) !== -1) { return; }
+                }
+		CacheFiles.push(item);
+	});
+	cache();
+});
+self.addEventListener('install', function(event) {
+  event.waitUntil(cache().then(function() {
+    return self.skipWaiting();
+  }));
+});
+self.addEventListener('activate', function(event) {
+  return self.clients.claim();
+});
+self.addEventListener('fetch', function(event) {
+    var responseBody = {
+      body: '',
+      id: event.request.url
+    };
+
+    var responseInit = {
+      	status: 200,
+	ok:'true',
+	type:'basic',
+	url:event.request.url,
+	redirected:'false',
+      	statusText: 'OK',
+      	headers: {
+        'Content-Type': 'application/json',
+        'X-Mock-Response': 'yes'
+      }
+    };
+    var mockResponse = new Response(JSON.stringify(responseBody), responseInit);
+    var item; var requested = 0;
+    for (item = 0; item < blacklist.length; item++) {
+	if (event.request.url.indexOf(blacklist[item]) !== -1) {
+		/* return mockResponse;*/
+		//return fromServer(event.request); }
+		requested = 1;
+		event.respondWith(fromServer(event.request.clone()).catch(function(error){}));
+		return;
+	}
+    }
+    for (item = 0; item < network.length; item++) {
+	if (event.request.url.indexOf(network[item]) !== -1) {
+                /* return mockResponse;*/
+                //return fromServer(event.request); }
+                requested = 1;
+                event.respondWith(fromServer(event.request.clone()).catch(function(error){}));
+                return;
+        }
+
+    }
+    if(requested !== 1){
+    event.respondWith(fromCache(event.request).catch(fromServer(event.request.clone())));
+    event.waitUntil(update(event.request.clone()).catch(function(error){ return caches.match(OFFLINE); }));
+    } else { return fromServer(event.request.clone()); }
 });
 
-// Activate
-self.addEventListener('activate', function(e) {
-	console.log('SuperPWA service worker activation');
-	e.waitUntil(
-		caches.keys().then(function(keyList) {
-			return Promise.all(keyList.map(function(key) {
-				if ( key !== cacheName ) {
-					console.log('SuperPWA old cache removed', key);
-					return caches.delete(key);
-				}
-			}));
-		})
-	);
-	return self.clients.claim();
-});
+function cache() {
+  return caches.open(CACHE).then(function (cache) {
+    var UniqueFiles = CacheFiles.filter(function(item, index){
+	return CacheFiles.indexOf(item) >= index;
+    });
+    //cache.addAll(UniqueFiles);
+    UniqueFiles.forEach(function(item) {
+	let request = new Request(item);
+	cache.add(item);
+    	update(request);
 
-// Fetch
-self.addEventListener('fetch', function(e) {
-	
-	// Return if the current request url is in the never cache list
-	if ( ! neverCacheUrls.every(checkNeverCacheList, e.request.url) ) {
-	  console.log( 'SuperPWA: Current request is excluded from cache.' );
-	  return;
-	}
-	
-	// Return if request url protocal isn't http or https
-	if ( ! e.request.url.match(/^(http|https):\/\//i) )
-		return;
-	
-	// Return if request url is from an external domain.
-	if ( new URL(e.request.url).origin !== location.origin )
-		return;
-	
-	// For POST requests, do not use the cache. Serve offline page if offline.
-	if ( e.request.method !== 'GET' ) {
-		e.respondWith(
-			fetch(e.request).catch( function() {
-				return caches.match(offlinePage);
-			})
-		);
-		return;
-	}
-	
-	// Revving strategy
-	if ( e.request.mode === 'navigate' && navigator.onLine ) {
-		e.respondWith(
-			fetch(e.request).then(function(response) {
-				return caches.open(cacheName).then(function(cache) {
-					cache.put(e.request, response.clone());
-					return response;
-				});  
-			})
-		);
-		return;
-	}
-
-	e.respondWith(
-		caches.match(e.request).then(function(response) {
-			return response || fetch(e.request).then(function(response) {
-				return caches.open(cacheName).then(function(cache) {
-					cache.put(e.request, response.clone());
-					return response;
-				});  
-			});
-		}).catch(function() {
-			return caches.match(offlinePage);
-		})
-	);
-});
-
-// Check if current url is in the neverCacheUrls list
-function checkNeverCacheList(url) {
-	if ( this.match(url) ) {
-		return false;
-	}
-	return true;
+    });
+    return;
+  });
 }
+
+function fromCache(request) {
+  return caches.open(CACHE).then(function (cache) {
+    return cache.match(request, {
+      ignoreSearch: true
+    }).then(function (matching) {
+        if(matching){
+                return matching;
+        } else {
+	        throw Error('Forwarding Unmatched Request to Network...');
+	}
+    }).catch(function(e) {
+	return fromServer(request);
+//        return update(request);
+     });
+
+  });
+}
+
+function update(request) {
+  if(request.method !== 'GET'){ return; }
+  return caches.open(CACHE).then(function (cache) {
+    return fetch(request).then(function (response) {
+    var item; var blocked = 0;
+    for (item = 0; item < blacklist.length; item++) {
+        if (request.url.indexOf(blacklist[item]) !== -1) {
+		blocked = 1;
+        }
+    }
+    for (item = 0; item < network.length; item++) {
+        if (request.url.indexOf(network[item]) !== -1) {
+                blocked = 1;
+        }
+    }
+    if(blocked !== 1) {
+    	if(request.method === 'GET'){
+		cache.put(request, response);
+	   	return response;
+      	}
+     } else { return; }
+    });
+  });
+}
+
+function fromServer(request){
+  return fetch(request).then(function(response){
+  	if(response){
+		return response;
+  	} else {
+		throw Error('Offline');
+  	}
+  }).catch(function(error){ return caches.match(OFFLINE); });
+}
+self.addEventListener('push', function(event) {
+  let notificationTitle = 'Notification';
+  const notificationOptions = {
+    icon: '/icon-192x192.png',
+    badge: '/icon-72x72.png',
+    data: {
+      url: origin,
+    },
+  };
+
+  if (event.data) {
+    const dataText = event.data.text();
+    notificationTitle = `${dataText}`;
+    notificationOptions.tag = `${dataText}`;
+    notificationOptions.body = `${dataText}`;
+    notificationOptions.data.url = origin;
+  }
+
+  event.waitUntil(
+    Promise.all([
+      self.registration.showNotification(
+        notificationTitle, notificationOptions),
+      self.analytics.trackEvent('push-received'),
+    ])
+  );
+});
+
+self.addEventListener('notificationclick', function(event) {
+  event.notification.close();
+
+  let clickResponsePromise = Promise.resolve();
+  if (event.notification.data && event.notification.data.url) {
+    clickResponsePromise = clients.openWindow(event.notification.data.url);
+  }
+
+  event.waitUntil(
+    Promise.all([
+      clickResponsePromise,
+      self.analytics.trackEvent('notification-click'),
+    ])
+  );
+});
+
+self.addEventListener('notificationclose', function(event) {
+  event.waitUntil(
+    Promise.all([
+      self.analytics.trackEvent('notification-close'),
+    ])
+  );
+});
+
 <?php return apply_filters( 'pwapro_sw_template', ob_get_clean() );
 }
 
@@ -213,7 +315,7 @@ function checkNeverCacheList(url) {
  */
 function pwapro_register_sw() {
 	
-	wp_enqueue_script( 'pwapro-register-sw', SUPERPWA_PATH_SRC . 'public/js/register-sw.js', array(), null, true );
+	wp_enqueue_script( 'pwapro-register-sw', PWAPRO_PATH_SRC . 'public/js/register-sw.js', array(), null, true );
 	wp_localize_script( 'pwapro-register-sw', 'pwapro_sw', array(
 			'url' => pwapro_sw( 'src' ),
 		)

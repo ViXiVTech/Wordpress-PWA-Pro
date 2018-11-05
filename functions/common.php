@@ -4,10 +4,10 @@
  *
  * @since 1.0
  * 
- * @function	superpwa_is_amp()				Check if any AMP plugin is installed
- * @function 	superpwa_get_start_url()		Return Start Page URL
- * @function	superpwa_httpsify()				Convert http URL to https
- * @function	superpwa_is_pwa_ready()			Check if PWA is ready
+ * @function	pwapro_is_amp()				Check if any AMP plugin is installed
+ * @function 	pwapro_get_start_url()		Return Start Page URL
+ * @function	pwapro_httpsify()				Convert http URL to https
+ * @function	pwapro_is_pwa_ready()			Check if PWA is ready
  */
 
 // Exit if accessed directly
@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * @since 1.2
  * @since 1.9 Added support for tagDiv AMP
  */
-function superpwa_is_amp() {
+function pwapro_is_amp() {
 	
 	// AMP for WordPress - https://wordpress.org/plugins/amp
 	if ( is_plugin_active( 'amp/amp.php' ) ) {
@@ -33,7 +33,7 @@ function superpwa_is_amp() {
 		return defined( 'AMPFORWP_AMP_QUERY_VAR' ) ? AMPFORWP_AMP_QUERY_VAR . '/' : 'amp/';
 	}
 	
-	// Better AMP – https://wordpress.org/plugins/better-amp/
+	// Better AMP â€“ https://wordpress.org/plugins/better-amp/
 	if ( is_plugin_active( 'better-amp/better-amp.php' ) ) {
 		return 'amp/';
 	}
@@ -65,24 +65,24 @@ function superpwa_is_amp() {
  *
  * @since 1.2
  * @since 1.3.1 Force HTTPS by replacing http:// with https://
- * @since 1.6 Use superpwa_httpsify() to force HTTPS. 
+ * @since 1.6 Use pwapro_httpsify() to force HTTPS. 
  * @since 1.6 Removed forcing of trailing slash and added dot (.) to the beginning.
- * @since 1.7 Added filter superpwa_manifest_start_url when $rel = true, for use with manifest. First ever filter in SuperPWA.
+ * @since 1.7 Added filter pwapro_manifest_start_url when $rel = true, for use with manifest. First ever filter in SuperPWA.
  */
-function superpwa_get_start_url( $rel = false ) {
+function pwapro_get_start_url( $rel = false ) {
 	
 	// Get Settings
-	$settings = superpwa_get_settings();
+	$settings = pwapro_get_settings();
 	
 	// Start Page
 	$start_url = get_permalink( $settings['start_url'] ) ? get_permalink( $settings['start_url'] ) : get_bloginfo( 'wpurl' );
 	
 	// Force HTTPS
-	$start_url = superpwa_httpsify( $start_url );
+	$start_url = pwapro_httpsify( $start_url );
 	
 	// AMP URL
-	if ( superpwa_is_amp() !== false && isset( $settings['start_url_amp'] ) && $settings['start_url_amp'] == 1 ) {
-		$start_url = trailingslashit( $start_url ) . superpwa_is_amp();
+	if ( pwapro_is_amp() !== false && isset( $settings['start_url_amp'] ) && $settings['start_url_amp'] == 1 ) {
+		$start_url = trailingslashit( $start_url ) . pwapro_is_amp();
 	}
 	
 	// Relative URL for manifest
@@ -91,7 +91,7 @@ function superpwa_get_start_url( $rel = false ) {
 		// Make start_url relative for manifest
 		$start_url = ( parse_url( $start_url, PHP_URL_PATH ) == '' ) ? '.' : parse_url( $start_url, PHP_URL_PATH );
 		
-		return apply_filters( 'superpwa_manifest_start_url', $start_url );
+		return apply_filters( 'pwapro_manifest_start_url', $start_url );
 	}
 	
 	return $start_url;
@@ -106,7 +106,7 @@ function superpwa_get_start_url( $rel = false ) {
  *
  * @since 1.6
  */
-function superpwa_httpsify( $url ) {
+function pwapro_httpsify( $url ) {
 	return str_replace( 'http://', 'https://', $url );
 }
 
@@ -121,14 +121,14 @@ function superpwa_httpsify( $url ) {
  * 
  * @since 1.8.1
  */
-function superpwa_is_pwa_ready() {
+function pwapro_is_pwa_ready() {
 	
 	if ( 
 		is_ssl() && 
-		superpwa_get_contents( superpwa_manifest( 'abs' ) ) && 
-		superpwa_get_contents( superpwa_sw( 'abs' ) ) 
+		pwapro_get_contents( pwapro_manifest( 'abs' ) ) && 
+		pwapro_get_contents( pwapro_sw( 'abs' ) ) 
 	) {
-		return apply_filters( 'superpwa_is_pwa_ready', true );
+		return apply_filters( 'pwapro_is_pwa_ready', true );
 	}
 	
 	return false; 

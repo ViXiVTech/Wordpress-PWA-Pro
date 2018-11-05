@@ -1,4 +1,4 @@
-# PWA Pro by ViXiV Technologies
+# PWA Pro for Wordpress by ViXiV Technologies
 <p>
 <!--
     <a href="https://twitter.com/intent/follow?screen_name=PWA-Pro">

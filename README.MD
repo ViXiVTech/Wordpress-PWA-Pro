@@ -7,16 +7,14 @@
 	<a href="https://github.com/SuperPWA/Super-Progressive-Web-Apps">
 		<img src="https://img.shields.io/github/stars/SuperPWA/Super-Progressive-Web-Apps.svg?style=social&logo=github&label=SuperPWA" alt="Star Super Progressive Web Apps">
 	</a>	
--->
-
 </p>
 
 <p align="center">
   <a href="https://superpwa.com/?utm_source=GitHub&utm_medium=Readme-SuperPWALogo">
     <img src="https://pbs.twimg.com/profile_images/975224418543681536/X9-CESOD_400x400.jpg" alt="Super Progressive Web Apps" width=175 height=175>
   </a>
-
-  <h3 align="center">Super Progressive Web Apps</h3>
+-->
+  <h3 align="center">PWA Pro</h3>
 
   <p align="center">
     SuperPWA helps to convert your WordPress website into Progressive Web Apps easily.

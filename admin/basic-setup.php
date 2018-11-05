@@ -70,7 +70,7 @@ function pwapro_admin_notices() {
 	
 		$pwapro_is_ready = pwapro_is_pwa_ready() ? 'Your app is ready with the default settings. ' : '';
 		
-		echo '<div class="updated notice is-dismissible"><p>' . sprintf( __( 'Thank you for installing <strong>Super Progressive Web Apps!</strong> '. $pwapro_is_ready .'<a href="%s">Customize your app &rarr;</a>', 'pwa-pro' ), admin_url( 'admin.php?page=pwapro' ) ) . '</p></div>';
+		echo '<div class="updated notice is-dismissible"><p>' . sprintf( __( 'Thank you for installing <strong>PWA Pro!</strong> '. $pwapro_is_ready .'<a href="%s">Customize your app &rarr;</a>', 'pwa-pro' ), admin_url( 'admin.php?page=pwapro' ) ) . '</p></div>';
 		
 		// Delete transient
 		delete_transient( 'pwapro_admin_notice_activation' );

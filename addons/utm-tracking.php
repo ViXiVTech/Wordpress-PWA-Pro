@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 function pwapro_utm_tracking_sub_menu() {
 	
 	// UTM Tracking sub-menu
-	add_submenu_page( 'pwapro', __( 'Super Progressive Web Apps', 'pwa-pro' ), __( 'UTM Tracking', 'pwa-pro' ), 'manage_options', 'pwapro-utm-tracking', 'pwapro_utm_tracking_interface_render' );
+	add_submenu_page( 'pwapro', __( 'PWA Pro', 'pwa-pro' ), __( 'UTM Tracking', 'pwa-pro' ), 'manage_options', 'pwapro-utm-tracking', 'pwapro_utm_tracking_interface_render' );
 }
 add_action( 'admin_menu', 'pwapro_utm_tracking_sub_menu' );
 

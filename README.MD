@@ -1,35 +1,35 @@
-# Super Progressive Web Apps
+# PWA Pro by ViXiV Technologies
 <p>
 <!--
-    <a href="https://twitter.com/intent/follow?screen_name=superpwa">
-		<img src="https://img.shields.io/twitter/follow/superpwa.svg?style=social&logo=twitter" alt="follow SuperPWA on Twitter">
+    <a href="https://twitter.com/intent/follow?screen_name=PWA-Pro">
+		<img src="https://img.shields.io/twitter/follow/PWA-Pro.svg?style=social&logo=twitter" alt="follow PWA-Pro on Twitter">
 	</a>
-	<a href="https://github.com/SuperPWA/Super-Progressive-Web-Apps">
-		<img src="https://img.shields.io/github/stars/SuperPWA/Super-Progressive-Web-Apps.svg?style=social&logo=github&label=SuperPWA" alt="Star Super Progressive Web Apps">
+	<a href="https://github.com/PWA-Pro/PWA-Pro">
+		<img src="https://img.shields.io/github/stars/PWA-Pro/PWA-Pro.svg?style=social&logo=github&label=PWA-Pro" alt="Star PWA Pro">
 	</a>	
 </p>
 
 <p align="center">
-  <a href="https://superpwa.com/?utm_source=GitHub&utm_medium=Readme-SuperPWALogo">
-    <img src="https://pbs.twimg.com/profile_images/975224418543681536/X9-CESOD_400x400.jpg" alt="Super Progressive Web Apps" width=175 height=175>
+  <a href="https://PWA-Pro.com/?utm_source=GitHub&utm_medium=Readme-PWA-ProLogo">
+    <img src="https://pbs.twimg.com/profile_images/975224418543681536/X9-CESOD_400x400.jpg" alt="PWA Pro" width=175 height=175>
   </a>
 -->
   <h3 align="center">PWA Pro</h3>
 
   <p align="center">
-    SuperPWA helps to convert your WordPress website into Progressive Web Apps easily.
+    PWA-Pro helps to convert your WordPress website into Progressive Web Apps easily.
     <br>
     <br>
-    <a href="https://superpwa.com/?utm_source=GitHub&utm_medium=Readme-viewWeb"><strong>Visit Website »</strong></a>
+    <a href="https://PWA-Pro.com/?utm_source=GitHub&utm_medium=Readme-viewWeb"><strong>Visit Website »</strong></a>
     <br>
     <br>
-    <a href="https://github.com/SuperPWA/Super-Progressive-Web-Apps/issues/new?template=bug.md">Report bug</a>
+    <a href="https://github.com/PWA-Pro/PWA-Pro/issues/new?template=bug.md">Report bug</a>
     ·
-    <a href="https://wordpress.org/plugins/super-progressive-web-apps/">WordPress Plugin</a>
+    <a href="https://wordpress.org/plugins/PWA-Pro/">WordPress Plugin</a>
     ·
-    <a href="https://wordpress.org/support/plugin/super-progressive-web-apps/reviews/">Reviews</a>
+    <a href="https://wordpress.org/support/plugin/PWA-Pro/reviews/">Reviews</a>
     ·
-    <a href="https://wordpress.org/plugins/super-progressive-web-apps/#faq">FAQ</a>
+    <a href="https://wordpress.org/plugins/PWA-Pro/#faq">FAQ</a>
     · 
     <a href="#-contributions">Contributions</a>
   </p>
@@ -37,48 +37,48 @@
 
 
 <p align="center">
-	<a href="https://superpwa.com/?utm_source=GitHub&utm_medium=Readme-LighthouseScore">
+	<a href="https://PWA-Pro.com/?utm_source=GitHub&utm_medium=Readme-LighthouseScore">
 			<img src="https://lighthouse-badge.appspot.com?score=100" alt="LightHouse Score">
 	</a>
-	<a href="https://wordpress.org/plugins/super-progressive-web-apps/">
-		<img src="https://img.shields.io/wordpress/plugin/dt/super-progressive-web-apps.svg?style=plastic" alt="Super Progressive Web Apps Downloads">
+	<a href="https://wordpress.org/plugins/PWA-Pro/">
+		<img src="https://img.shields.io/wordpress/plugin/dt/PWA-Pro.svg?style=plastic" alt="PWA Pro Downloads">
 	</a>
-	<a href="https://wordpress.org/plugins/super-progressive-web-apps/">
-		<img src="https://img.shields.io/wordpress/plugin/r/super-progressive-web-apps.svg?style=plastic" alt="Super Progressive Web Apps Rating">
+	<a href="https://wordpress.org/plugins/PWA-Pro/">
+		<img src="https://img.shields.io/wordpress/plugin/r/PWA-Pro.svg?style=plastic" alt="PWA Pro Rating">
 	</a>
-	<a href="https://wordpress.org/plugins/super-progressive-web-apps/">
-		<img src="https://img.shields.io/wordpress/plugin/v/super-progressive-web-apps.svg?style=plastic" alt="Super Progressive Web Apps Version">
+	<a href="https://wordpress.org/plugins/PWA-Pro/">
+		<img src="https://img.shields.io/wordpress/plugin/v/PWA-Pro.svg?style=plastic" alt="PWA Pro Version">
 	</a>
-	<a href="https://wordpress.org/plugins/super-progressive-web-apps/">
-		<img src="https://img.shields.io/wordpress/v/super-progressive-web-apps.svg?style=plastic" alt="Super Progressive Web Apps Version">
+	<a href="https://wordpress.org/plugins/PWA-Pro/">
+		<img src="https://img.shields.io/wordpress/v/PWA-Pro.svg?style=plastic" alt="PWA Pro Version">
 	</a>	
 </p>
 
-## Welcome to the Super PWA GitHub repository
+## Welcome to the PWA Pro repository
 
- ⚡️ Demo :  <a href="https://superpwa.com/?utm_source=GitHub&utm_medium=Readme-WelcomeDemo">superpwa.com</a> [Check Video's to know how it works](#videos-on-how-add-to-home-screen--progressive-web-apps-works-on-different-browsers)
+ ⚡️ Demo :  <a href="https://PWA-Pro.com/?utm_source=GitHub&utm_medium=Readme-WelcomeDemo">PWA-Pro.com</a> [Check Video's to know how it works](#videos-on-how-add-to-home-screen--progressive-web-apps-works-on-different-browsers)
 
 ## What is Progressive Web Apps
 Progressive Web Apps (PWA) is a new technology that creates a middle ground between a website and a mobile app. They are installed on the phone like a normal app (web app) and can be accessed from the home screen. 
 
 Users can come back to your website by launching the app from their home screen and interact with your website through an app-like interface. Your return visitors will experience almost-instant loading times and enjoy the great performance benefits of your PWA!
 
-<a href="https://superpwa.com?utm_source=github&utm_medium=Readme-what-is-pwa">Super Progressive Web Apps</a> makes it easy for you to convert your WordPress website into a Progressive Web App easily!
+<a href="https://PWA-Pro.com?utm_source=github&utm_medium=Readme-what-is-pwa">PWA Pro</a> makes it easy for you to convert your WordPress website into a Progressive Web App easily!
 
 ## ⭐ Support the project
 If you feel super excited and want to support us in a small way, please consider starring and/or sharing the repo! This helps us getting known and grow the community.
 
-<a href="#"><img src="https://github.com/josevarghese/Progressive-Web-Apps-and-Service-Worker-Supported-Browsers/blob/master/star-superpwa-github.gif?raw=true" alt="Star our repo" width="300px" height="76.95px" /></a>
+<a href="#"><img src="https://github.com/josevarghese/Progressive-Web-Apps-and-Service-Worker-Supported-Browsers/blob/master/star-PWA-Pro-github.gif?raw=true" alt="Star our repo" width="300px" height="76.95px" /></a>
 
-Also you can support us via [following on social media's and share about us](#share-via-social-medias-and-spread-superpwa).
+Also you can support us via [following on social media's and share about us](#share-via-social-medias-and-spread-PWA-Pro).
 
 ## 🏗 Installation
-Once SuperPWA ⚡️ is installed, users browsing your website from a supported mobile device will see a "Add To Home Screen" notice (from the bottom of the screen) and will be able to 'install your website' on the home screen of their device. Every page visited is stored locally on their device and will be available to read even when they are offline!
+Once PWA-Pro ⚡️ is installed, users browsing your website from a supported mobile device will see a "Add To Home Screen" notice (from the bottom of the screen) and will be able to 'install your website' on the home screen of their device. Every page visited is stored locally on their device and will be available to read even when they are offline!
 
-SuperPWA is easy to configure, it takes less than a minute to set-up your Progressive Web App! SuperPWA does a clean uninstall, by removing every database entry and file that it creates. In fact, none of the default settings are saved to the database until you manually save it the first time. Go ahead and give it a try.
+PWA-Pro is easy to configure, it takes less than a minute to set-up your Progressive Web App! PWA-Pro does a clean uninstall, by removing every database entry and file that it creates. In fact, none of the default settings are saved to the database until you manually save it the first time. Go ahead and give it a try.
 
 ### 💡 Progressive Web App Minimum Requirments
-- [x] Progressive Web Apps require that your WordPress website is served from a secure origin i.e. your website should be HTTPS and not HTTP. If your website isn’t HTTPS, please contact your host about it. You can also ask us [Support Forums](https://wordpress.org/support/plugin/super-progressive-web-apps) if you need help.
+- [x] Progressive Web Apps require that your WordPress website is served from a secure origin i.e. your website should be HTTPS and not HTTP. If your website isn’t HTTPS, please contact your host about it. You can also ask us [Support Forums](https://wordpress.org/support/plugin/PWA-Pro) if you need help.
 </br>
 
 ##### Videos on How Add to Home Screen & Progressive Web Apps works on Different Browsers
@@ -89,7 +89,7 @@ SuperPWA is easy to configure, it takes less than a minute to set-up your Progre
 
 #### 📦 What's in the box
 
-Here are the current features of Super Progressive Web Apps: 
+Here are the current features of PWA Pro: 
 
 * Generate a manifest for your website and add it to the head of your website.
 * Set the application icon for your Progressive Web App. 
@@ -103,15 +103,15 @@ Here are the current features of Super Progressive Web Apps:
 * New in version 1.2: Set the start page of your PWA.
 * New in version 1.2: Set Accelerated Mobile Pages (AMP) version of the start page. Supported plugins: AMP for WordPress, AMP for WP, Better AMP, AMP Supremacy, WP AMP.
 * New in version 1.3: Added support for high-quality splash screen. You can now set the 512x512 icon for the splash screen of your Progressive Web App.
-* New in version 1.3: Super Progressive Web Apps now accounts for content updates and will update the cache as you update the website. 
+* New in version 1.3: PWA Pro now accounts for content updates and will update the cache as you update the website. 
 * New in version 1.3: Improved in-browser service worker update handling.
 * New in version 1.4: You can now set the default orientation of your PWA. Choose from "any" (Follow Device Orientation), "Portrait" and "Landscape".
 * New in version 1.4: You can now set the theme_color property in the manifest.
 * New in version 1.5: OneSignal integration for Push notifications.
 * New in version 1.6: WordPress Multisite Network compatibility.
-* New in version 1.7: Add-Ons for SuperPWA is here! Ships with [UTM Tracking Add-On](https://superpwa.com/addons/utm-tracking/?utm_source=GitHub&utm_medium=Readme-version) to track visits coming from your PWA.
+* New in version 1.7: Add-Ons for PWA-Pro is here! Ships with [UTM Tracking Add-On](https://PWA-Pro.com/addons/utm-tracking/?utm_source=GitHub&utm_medium=Readme-version) to track visits coming from your PWA.
 * New in version 1.8: Compatibility issues with OneSignal are now resolved! 
-* New in version 1.8: New Add-On: [Apple Touch Icons](https://superpwa.com/addons/apple-touch-icons/?utm_source=GitHub&utm_medium=Readme-version) that sets your app icons as Apple Touch Icons. 
+* New in version 1.8: New Add-On: [Apple Touch Icons](https://PWA-Pro.com/addons/apple-touch-icons/?utm_source=GitHub&utm_medium=Readme-version) that sets your app icons as Apple Touch Icons. 
 
 #### 🔮 Upcoming features:
 * Offline Indicator Notice.
@@ -154,20 +154,20 @@ The list is fast growing and is likely to be supported in most major browsers by
 #### ⚙️ WordPress Installation
 
 * Visit WordPress Admin > **Plugins** > **Add New**
-* Search for **Super Progressive Web Apps**
-* Click "**Install Now**" and then "**Activate**" Super Progressive Web Apps
+* Search for **PWA Pro**
+* Click "**Install Now**" and then "**Activate**" PWA Pro
 
 #### ⚙️ To install manually:
 
-* Upload super-progressive-web-apps folder to the /wp-content/plugins/ directory on your server
+* Upload PWA-Pro folder to the /wp-content/plugins/ directory on your server
 * Go to WordPress Admin > **Plugins**
-* Activate **Super Progressive Web Apps** plugin from the list.
+* Activate **PWA Pro** plugin from the list.
 
 #### Customizing Your Progressive Web App
 
 Your Progressive Web App should be ready to test with the default settings upon activation. You can customize it further and make it truly your own.
 
-* Go to WordPress Admin > "**SuperPWA**" > **Settings**
+* Go to WordPress Admin > "**PWA-Pro**" > **Settings**
 * Set a Background Color for the splash screen to be shown when your PWA is opened on a mobile device.
 * Set the Application Icon. This will be the icon of your PWA when it is added to the homescreen in a mobile device. The icon must be a PNG image and exactly 192 x 192 pixels in size.
 * Set the Offline Page. This page will be displayed if the user is offline and the page he requested is not cached already. Ideally you should create a dedicated WordPress page and set it here. Within the page you create, you could add a note that reads, "It looks like you are offline and the page you requested is not available right now. Please check back again once you are online.". 
@@ -181,46 +181,46 @@ Your Progressive Web App should be ready to test with the default settings upon 
 * Click on it and your PWA will be added to your home screen. Wait for the install to complete. 
 * Go to your home screen and open your PWA. Browse into a few pages if you like. Close the App.
 * Disconnect from the internet and now open your PWA again. You should be able to see all the pages that you previously browsed. 
-* Try visiting a page that you did not visit before. You should see the page you set as your "Offline Page" in the settings of SuperPWA. 
+* Try visiting a page that you did not visit before. You should see the page you set as your "Offline Page" in the settings of PWA-Pro. 
 
 
 ### 🤝 About us
 > We are a duo who got excited about the idea. Our mission is simple: Help you build an awesome PWA that your users would want to have on their home screen. When we first heard about PWA we wanted to learn everything about it. We have spent countless hours learning and wants to share it with the world. Please give us your constructive feedback and support. 
 
 ## ⛷️ Support
-This is a developer's portal for Super Progressive Web Apps and should not be used for support. Please visit the
-[Support Forums](https://wordpress.org/support/plugin/super-progressive-web-apps).
+This is a developer's portal for PWA Pro and should not be used for support. Please visit the
+[Support Forums](https://wordpress.org/support/plugin/PWA-Pro).
 
 ## 🐛 Reporting bugs
-If you ever get stuck, we are here to watch your back! [Open a New Support Topic](https://wordpress.org/support/plugin/super-progressive-web-apps) ticket if you have a question or need a feature. We are super excited to hear your feedback and we want to genuinely help you build the best Progressive Web App for your WordPress website!
+If you ever get stuck, we are here to watch your back! [Open a New Support Topic](https://wordpress.org/support/plugin/PWA-Pro) ticket if you have a question or need a feature. We are super excited to hear your feedback and we want to genuinely help you build the best Progressive Web App for your WordPress website!
 
 ## 🎍 Contributions
 Anyone is welcome to contribute to Super PWA to make it SUPER.
 
 There are various ways you can contribute:
 
-* [Raise an issue](https://github.com/SuperPWA/Super-Progressive-Web-Apps/issues) on GitHub.
+* [Raise an issue](https://github.com/PWA-Pro/PWA-Pro/issues) on GitHub.
 * Follow and Engage with us on Social Media
 
- &nbsp;&nbsp;&nbsp; <a href="https://twitter.com/intent/follow?screen_name=superpwa" target="_blank" style="width:100%"><img src="https://image.flaticon.com/icons/svg/174/174876.svg" title="Follow SuperPWA on Twitter" width=35 height=35></a>&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://www.youtube.com/channel/UCMFlNeutNCwTNls186moUUA" target="_blank" style="width:100%"><img src="https://image.flaticon.com/icons/svg/174/174883.svg" title="Follow SuperPWA on YouTube" width=35 height=35></a>&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://www.facebook.com/SuperPWA/" target="_blank" style="width:100%"><img src="https://image.flaticon.com/icons/svg/174/174848.svg" title="Follow SuperPWA on Facebook" width=35 height=35></a>&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://www.instagram.com/superpwa/" target="_blank" style="width:100%"><img src="https://image.flaticon.com/icons/svg/174/174855.svg" title="Follow SuperPWA on Instagram" width=35 height=35></a>&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://plus.google.com/+SuperPWA" target="_blank" style="width:100%"><img src="https://image.flaticon.com/icons/svg/174/174851.svg" title="Follow on Google+" width=35 height=35></a>&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp; <a href="https://twitter.com/intent/follow?screen_name=PWA-Pro" target="_blank" style="width:100%"><img src="https://image.flaticon.com/icons/svg/174/174876.svg" title="Follow PWA-Pro on Twitter" width=35 height=35></a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://www.youtube.com/channel/UCMFlNeutNCwTNls186moUUA" target="_blank" style="width:100%"><img src="https://image.flaticon.com/icons/svg/174/174883.svg" title="Follow PWA-Pro on YouTube" width=35 height=35></a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://www.facebook.com/PWA-Pro/" target="_blank" style="width:100%"><img src="https://image.flaticon.com/icons/svg/174/174848.svg" title="Follow PWA-Pro on Facebook" width=35 height=35></a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://www.instagram.com/PWA-Pro/" target="_blank" style="width:100%"><img src="https://image.flaticon.com/icons/svg/174/174855.svg" title="Follow PWA-Pro on Instagram" width=35 height=35></a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://plus.google.com/+PWA-Pro" target="_blank" style="width:100%"><img src="https://image.flaticon.com/icons/svg/174/174851.svg" title="Follow on Google+" width=35 height=35></a>&nbsp;&nbsp;&nbsp;&nbsp;
 
 * Send us a Pull Request with your bug fixes and/or new features.
-* Provide feedback and [suggestions on enhancements](https://github.com/SuperPWA/Super-Progressive-Web-Apps/issues?direction=desc&labels=Enhancement&page=1&sort=created&state=open).
-* ##### Share via Social Media's and spread SuperPWA
+* Provide feedback and [suggestions on enhancements](https://github.com/PWA-Pro/PWA-Pro/issues?direction=desc&labels=Enhancement&page=1&sort=created&state=open).
+* ##### Share via Social Media's and spread PWA-Pro
 
- &nbsp;&nbsp;&nbsp; <a href="https://twitter.com/home?status=Super%20Progressive%20Web%20Apps%20helps%20to%20convert%20your%20WordPress%20website%20into%20PWA%20%23SuperPWA%20https%3A//github.com/SuperPWA/Super-Progressive-Web-Apps/%20%40SuperPWA" target="_blank" style="width:100%"><img src="https://image.flaticon.com/icons/svg/174/174876.svg" title="Share SuperPWA on Twitter" width=20 height=20> Share on Twitter </a>&nbsp;&nbsp;&nbsp;&nbsp;
-<p> &nbsp;&nbsp;&nbsp; <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//github.com/SuperPWA/Super-Progressive-Web-Apps/" target="_blank" style="width:100%"><img src="https://image.flaticon.com/icons/svg/174/174848.svg" title="Follow SuperPWA on Facebook" width=20 height=20> Share on Facebook </a>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-<p> &nbsp;&nbsp;&nbsp; <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//github.com/SuperPWA/Super-Progressive-Web-Apps/&title=Super%20Progressive%20Web%20Apps&summary=Super%20Progressive%20Web%20Apps%20helps%20to%20convert%20your%20WordPress%20website%20into%20PWA%20%23SuperPWA&source=GitHub" target="_blank" style="width:100%"><img src="https://image.flaticon.com/icons/svg/174/174857.svg" title="Share SuperPWA on LinkedIn" width=20 height=20> Share on LinkedIn</a>&nbsp;&nbsp;&nbsp;&nbsp;</p>
-<p> &nbsp;&nbsp;&nbsp; <a href="https://plus.google.com/share?url=https%3A//github.com/SuperPWA/Super-Progressive-Web-Apps/" target="_blank" style="width:100%"><img src="https://image.flaticon.com/icons/svg/174/174851.svg" title="Share on Google+" width=20 height=20> Share on Google+ </a>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+ &nbsp;&nbsp;&nbsp; <a href="https://twitter.com/home?status=Super%20Progressive%20Web%20Apps%20helps%20to%20convert%20your%20WordPress%20website%20into%20PWA%20%23PWA-Pro%20https%3A//github.com/PWA-Pro/PWA-Pro/%20%40PWA-Pro" target="_blank" style="width:100%"><img src="https://image.flaticon.com/icons/svg/174/174876.svg" title="Share PWA-Pro on Twitter" width=20 height=20> Share on Twitter </a>&nbsp;&nbsp;&nbsp;&nbsp;
+<p> &nbsp;&nbsp;&nbsp; <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//github.com/PWA-Pro/PWA-Pro/" target="_blank" style="width:100%"><img src="https://image.flaticon.com/icons/svg/174/174848.svg" title="Follow PWA-Pro on Facebook" width=20 height=20> Share on Facebook </a>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p> &nbsp;&nbsp;&nbsp; <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//github.com/PWA-Pro/PWA-Pro/&title=Super%20Progressive%20Web%20Apps&summary=Super%20Progressive%20Web%20Apps%20helps%20to%20convert%20your%20WordPress%20website%20into%20PWA%20%23PWA-Pro&source=GitHub" target="_blank" style="width:100%"><img src="https://image.flaticon.com/icons/svg/174/174857.svg" title="Share PWA-Pro on LinkedIn" width=20 height=20> Share on LinkedIn</a>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p> &nbsp;&nbsp;&nbsp; <a href="https://plus.google.com/share?url=https%3A//github.com/PWA-Pro/PWA-Pro/" target="_blank" style="width:100%"><img src="https://image.flaticon.com/icons/svg/174/174851.svg" title="Share on Google+" width=20 height=20> Share on Google+ </a>&nbsp;&nbsp;&nbsp;&nbsp;</p>
 
 ## 📇 Changelog
-[superpwa.com/changelog/](https://superpwa.com/changelog/?utm_source=GitHub&utm_medium=Readme-Changelog).
+[PWA-Pro.com/changelog/](https://PWA-Pro.com/changelog/?utm_source=GitHub&utm_medium=Readme-Changelog).
     
 Emoji Credits : [Emojipedia](emojipedia.org)
 Social Media Icon Credits : [Flaticon](flaticon.com)
 
-**[⬆ back to top](#super-progressive-web-apps)**
+**[⬆ back to top](#PWA-Pro)**

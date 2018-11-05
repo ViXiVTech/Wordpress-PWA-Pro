@@ -25,13 +25,13 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 function pwapro_add_menu_links() {
 	
 	// Main menu page
-	add_menu_page( __( 'Super Progressive Web Apps', 'pwa-pro' ), __( 'SuperPWA', 'pwa-pro' ), 'manage_options', 'pwapro','pwapro_admin_interface_render', SUPERPWA_PATH_SRC. 'admin/img/pwapro-menu-icon.png', 100 );
+	add_menu_page( __( 'PWA Pro', 'pwa-pro' ), __( 'PWAPro', 'pwa-pro' ), 'manage_options', 'pwapro','pwapro_admin_interface_render', PWAPRO_PATH_SRC. 'admin/img/pwapro-menu-icon.png', 100 );
 	
 	// Settings page - Same as main menu page
-	add_submenu_page( 'pwapro', __( 'Super Progressive Web Apps', 'pwa-pro' ), __( 'Settings', 'pwa-pro' ), 'manage_options', 'pwapro', 'pwapro_admin_interface_render' );
+	add_submenu_page( 'pwapro', __( 'PWA Pro', 'pwa-pro' ), __( 'Settings', 'pwa-pro' ), 'manage_options', 'pwapro', 'pwapro_admin_interface_render' );
 	
 	// Add-Ons page
-	add_submenu_page( 'pwapro', __( 'Super Progressive Web Apps', 'pwa-pro' ), __( 'Add-Ons', 'pwa-pro' ), 'manage_options', 'pwapro-addons', 'pwapro_addons_interface_render' );
+	add_submenu_page( 'pwapro', __( 'PWA Pro', 'pwa-pro' ), __( 'Add-Ons', 'pwa-pro' ), 'manage_options', 'pwapro-addons', 'pwapro_addons_interface_render' );
 }
 add_action( 'admin_menu', 'pwapro_add_menu_links' );
 
@@ -209,7 +209,7 @@ function pwapro_validater_and_sanitizer( $settings ) {
 	$settings['theme_color'] = preg_match( '/#([a-f0-9]{3}){1,2}\b/i', $settings['theme_color'] ) ? sanitize_text_field( $settings['theme_color'] ) : '#D5E0EB';
 	
 	// Sanitize application icon
-	$settings['icon'] = sanitize_text_field( $settings['icon'] ) == '' ? pwapro_httpsify( SUPERPWA_PATH_SRC . 'public/images/logo.png' ) : sanitize_text_field( pwapro_httpsify( $settings['icon'] ) );
+	$settings['icon'] = sanitize_text_field( $settings['icon'] ) == '' ? pwapro_httpsify( PWAPRO_PATH_SRC . 'public/images/logo.png' ) : sanitize_text_field( pwapro_httpsify( $settings['icon'] ) );
 	
 	// Sanitize splash screen icon
 	$settings['splash_icon'] = sanitize_text_field( pwapro_httpsify( $settings['splash_icon'] ) );
@@ -229,8 +229,8 @@ function pwapro_get_settings() {
 				'app_name'			=> get_bloginfo( 'name' ),
 				'app_short_name'	=> get_bloginfo( 'name' ),
 				'description'		=> get_bloginfo( 'description' ),
-				'icon'				=> SUPERPWA_PATH_SRC . 'public/images/logo.png',
-				'splash_icon'		=> SUPERPWA_PATH_SRC . 'public/images/logo-512x512.png',
+				'icon'				=> PWAPRO_PATH_SRC . 'public/images/logo.png',
+				'splash_icon'		=> PWAPRO_PATH_SRC . 'public/images/logo-512x512.png',
 				'background_color' 	=> '#D5E0EB',
 				'theme_color' 		=> '#D5E0EB',
 				'start_url' 		=> 0,
@@ -251,7 +251,7 @@ function pwapro_get_settings() {
  */
 function pwapro_enqueue_css_js( $hook ) {
 	
-    // Load only on SuperPWA plugin pages
+    // Load only on PWAPro plugin pages
 	if ( strpos( $hook, 'pwapro' ) === false ) {
 		return;
 	}
@@ -264,7 +264,7 @@ function pwapro_enqueue_css_js( $hook ) {
 	wp_enqueue_media();
 	
 	// Main JS
-    wp_enqueue_script( 'pwapro-main-js', SUPERPWA_PATH_SRC . 'admin/js/main.js', array( 'wp-color-picker' ), SUPERPWA_VERSION, true );
+    wp_enqueue_script( 'pwapro-main-js', PWAPRO_PATH_SRC . 'admin/js/main.js', array( 'wp-color-picker' ), PWAPRO_VERSION, true );
 }
 add_action( 'admin_enqueue_scripts', 'pwapro_enqueue_css_js' );
 
@@ -302,7 +302,7 @@ function pwapro_footer_text( $default ) {
 		return $default;
 	}
 	
-    $pwapro_footer_text = sprintf( __( 'If you like SuperPWA, please <a href="%s" target="_blank">make a donation</a> or leave a <a href="%s" target="_blank">&#9733;&#9733;&#9733;&#9733;&#9733;</a> rating to support continued development. Thanks a bunch!', 'pwa-pro' ), 
+    $pwapro_footer_text = sprintf( __( 'If you like PWAPro, please <a href="%s" target="_blank">make a donation</a> or leave a <a href="%s" target="_blank">&#9733;&#9733;&#9733;&#9733;&#9733;</a> rating to support continued development. Thanks a bunch!', 'pwa-pro' ), 
 	'https://millionclues.com/donate/',
 	'https://wordpress.org/support/plugin/pwa-pro/reviews/?rate=5#new-post'
 	);
@@ -324,6 +324,6 @@ function pwapro_footer_version( $default ) {
 		return $default;
 	}
 	
-	return 'SuperPWA ' . SUPERPWA_VERSION;
+	return 'PWAPro ' . PWAPRO_VERSION;
 }
 add_filter( 'update_footer', 'pwapro_footer_version', 11 );

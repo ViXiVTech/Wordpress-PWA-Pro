@@ -51,7 +51,7 @@ function pwapro_activate_plugin( $network_active ) {
 	// If we are here, then plugin is network activated on a multisite. Set transient for activation notice on network admin.
 	set_transient( 'pwapro_network_admin_notice_activation', true, 60 );
 }
-register_activation_hook( SUPERPWA_PATH_ABS . 'pwapro.php', 'pwapro_activate_plugin' );
+register_activation_hook( PWAPRO_PATH_ABS . 'pwapro.php', 'pwapro_activate_plugin' );
 
 /**
  * Admin Notices
@@ -79,7 +79,7 @@ function pwapro_admin_notices() {
 	// Admin notice on plugin upgrade
 	if ( get_transient( 'pwapro_admin_notice_upgrade_complete' ) ) {
 		
-		echo '<div class="updated notice is-dismissible"><p>' . sprintf( __( '<strong>SuperPWA</strong>: Successfully updated to version %s. Thank you! <a href="%s" target="_blank">Discover new features and read the story &rarr;</a>', 'pwa-pro' ), SUPERPWA_VERSION, 'https://pwapro.com/category/release-notes/latest/?utm_source=pwapro-plugin&utm_medium=update-success-notice' ) . '</p></div>';
+		echo '<div class="updated notice is-dismissible"><p>' . sprintf( __( '<strong>SuperPWA</strong>: Successfully updated to version %s. Thank you! <a href="%s" target="_blank">Discover new features and read the story &rarr;</a>', 'pwa-pro' ), PWAPRO_VERSION, 'https://pwapro.com/category/release-notes/latest/?utm_source=pwapro-plugin&utm_medium=update-success-notice' ) . '</p></div>';
 		
 		// Delete transient
 		delete_transient( 'pwapro_admin_notice_upgrade_complete' );
@@ -113,7 +113,7 @@ function pwapro_network_admin_notices() {
 	// Network admin notice on plugin upgrade
 	if ( get_transient( 'pwapro_admin_notice_upgrade_complete' ) ) {
 		
-		echo '<div class="updated notice is-dismissible"><p>' . sprintf( __( '<strong>SuperPWA</strong>: Successfully updated to version %s. Thank you! <a href="%s" target="_blank">Discover new features and read the story &rarr;</a>', 'pwa-pro' ), SUPERPWA_VERSION, 'https://pwapro.com/category/release-notes/latest/?utm_source=pwapro-plugin&utm_medium=update-success-notice-multisite' ) . '</p></div>';
+		echo '<div class="updated notice is-dismissible"><p>' . sprintf( __( '<strong>SuperPWA</strong>: Successfully updated to version %s. Thank you! <a href="%s" target="_blank">Discover new features and read the story &rarr;</a>', 'pwa-pro' ), PWAPRO_VERSION, 'https://pwapro.com/category/release-notes/latest/?utm_source=pwapro-plugin&utm_medium=update-success-notice-multisite' ) . '</p></div>';
 		
 		// Delete transient
 		delete_transient( 'pwapro_admin_notice_upgrade_complete' );
@@ -133,7 +133,7 @@ function pwapro_upgrader() {
 	$current_ver = get_option( 'pwapro_version' );
 	
 	// Return if we have already done this todo
-	if ( version_compare( $current_ver, SUPERPWA_VERSION, '==' ) ) {
+	if ( version_compare( $current_ver, PWAPRO_VERSION, '==' ) ) {
 		return;
 	}
 	
@@ -158,7 +158,7 @@ function pwapro_upgrader() {
 		}
 		
 		// Save SuperPWA version to database.
-		add_option( 'pwapro_version', SUPERPWA_VERSION );
+		add_option( 'pwapro_version', PWAPRO_VERSION );
 		
 		return;
 	}
@@ -216,7 +216,7 @@ function pwapro_upgrader() {
 	pwapro_generate_sw();
 	
 	// Add current version to database
-	update_option( 'pwapro_version', SUPERPWA_VERSION );
+	update_option( 'pwapro_version', PWAPRO_VERSION );
 	
 	// For multisites, save the activation status of current blog.
 	pwapro_multisite_activation_status( true );
@@ -254,7 +254,7 @@ function pwapro_deactivate_plugin( $network_active ) {
 		pwapro_multisite_network_deactivator();
 	}
 }
-register_deactivation_hook( SUPERPWA_PATH_ABS . 'pwapro.php', 'pwapro_deactivate_plugin' );
+register_deactivation_hook( PWAPRO_PATH_ABS . 'pwapro.php', 'pwapro_deactivate_plugin' );
 
 /**
  * Load plugin text domain

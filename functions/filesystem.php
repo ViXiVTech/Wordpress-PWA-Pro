@@ -4,10 +4,10 @@
  *
  * @since 1.0
  * 
- * @function	superpwa_wp_filesystem_init()	Initialize the WP filesystem
- * @function	superpwa_put_contents()			Write to a file using WP_Filesystem() functions
- * @function	superpwa_get_contents()			Read contents of a file using WP_Filesystem() functions
- * @function	superpwa_delete()				Delete a file
+ * @function	pwapro_wp_filesystem_init()	Initialize the WP filesystem
+ * @function	pwapro_put_contents()			Write to a file using WP_Filesystem() functions
+ * @function	pwapro_get_contents()			Read contents of a file using WP_Filesystem() functions
+ * @function	pwapro_delete()				Delete a file
  */
 
 // Exit if accessed directly
@@ -18,7 +18,7 @@ if ( ! defined('ABSPATH') ) exit;
  *
  * @since 1.0
  */
-function superpwa_wp_filesystem_init() {
+function pwapro_wp_filesystem_init() {
 	
 	global $wp_filesystem;
 	
@@ -37,7 +37,7 @@ function superpwa_wp_filesystem_init() {
  * 
  * @since	1.0
  */
-function superpwa_put_contents( $file, $content = null ) {
+function pwapro_put_contents( $file, $content = null ) {
 	
 	// Return false if no filename is provided
 	if ( empty( $file ) ) {
@@ -45,7 +45,7 @@ function superpwa_put_contents( $file, $content = null ) {
 	}
 	
 	// Initialize the WP filesystem
-	superpwa_wp_filesystem_init();
+	pwapro_wp_filesystem_init();
 	global $wp_filesystem;
 	
 	if( ! $wp_filesystem->put_contents( $file, $content, 0644) ) {
@@ -64,7 +64,7 @@ function superpwa_put_contents( $file, $content = null ) {
  * 
  * @since 	1.0
  */
-function superpwa_get_contents( $file, $array = false ) {
+function pwapro_get_contents( $file, $array = false ) {
 	
 	// Return false if no filename is provided
 	if ( empty( $file ) ) {
@@ -72,7 +72,7 @@ function superpwa_get_contents( $file, $array = false ) {
 	}
 	
 	// Initialize the WP filesystem
-	superpwa_wp_filesystem_init();
+	pwapro_wp_filesystem_init();
 	global $wp_filesystem;
 	
 	// Reads entire file into a string
@@ -92,7 +92,7 @@ function superpwa_get_contents( $file, $array = false ) {
  * 
  * @since	1.0
  */
-function superpwa_delete( $file ) {
+function pwapro_delete( $file ) {
 	
 	// Return false if no filename is provided
 	if ( empty( $file ) ) {
@@ -100,7 +100,7 @@ function superpwa_delete( $file ) {
 	}
 	
 	// Initialize the WP filesystem
-	superpwa_wp_filesystem_init();
+	pwapro_wp_filesystem_init();
 	global $wp_filesystem;
 	
 	return $wp_filesystem->delete( $file );

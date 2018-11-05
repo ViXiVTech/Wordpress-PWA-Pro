@@ -4,13 +4,13 @@
  *
  * @since 1.7
  * 
- * @function 	pwapro_get_addons()					Add-ons of PWA Pro
+ * @function 	pwapro_get_addons()				Add-ons of PWA Pro
  * @function	pwapro_addons_interface_render()		Add-Ons UI renderer
  * @function	pwapro_addons_status()				Find add-on status
  * @function	pwapro_addons_button_text()			Button text based on add-on status
  * @function 	pwapro_addons_button_link() 			Action URL based on add-on status
  * @function	pwapro_addons_handle_activation()		Handle add-on activation
- * @function	pwapro_addons_handle_deactivation()	Handle add-on deactivation
+ * @function	pwapro_addons_handle_deactivation()		Handle add-on deactivation
  */
 
 // Exit if accessed directly

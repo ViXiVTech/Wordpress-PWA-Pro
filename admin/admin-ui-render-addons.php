@@ -132,7 +132,7 @@ function pwapro_addons_interface_render() {
 	?>
 	
 	<div class="wrap">
-		<h1><?php _e( 'Add-Ons for', 'pwa-pro' ); ?> PWA Pro <sup><?php echo SUPERPWA_VERSION; ?></sup></h1>
+		<h1><?php _e( 'Add-Ons for', 'pwa-pro' ); ?> PWA Pro <sup><?php echo PWAPRO_VERSION; ?></sup></h1>
 		
 		<p><?php _e( 'Add-Ons extend the functionality of PWA Pro.', 'pwa-pro' ); ?></p>
 		
@@ -166,7 +166,7 @@ function pwapro_addons_interface_render() {
 								<h3>
 									<a href="<?php echo $addon['link'] . '?utm_source=pwapro-plugin&utm_medium=addon-card'; ?>" target="_blank">
 										<?php echo $addon['name']; ?>
-										<img src="<?php echo SUPERPWA_PATH_SRC . 'admin/img/' . $addon['icon']; ?>" class="plugin-icon" alt="">
+										<img src="<?php echo PWAPRO_PATH_SRC . 'admin/img/' . $addon['icon']; ?>" class="plugin-icon" alt="">
 									</a>
 								</h3>
 							</div>
@@ -196,7 +196,7 @@ function pwapro_addons_interface_render() {
 								if ( pwapro_addons_status( $slug ) == 'active' ) {
 									printf( __( '<span class="compatibility-compatible"><strong>Add-On active.</strong> <a href="%s"%s>%s</a></span>', 'pwa-pro' ), $addon['admin_link'], $link_target, $addon['admin_link_text'] ); 
 								} 
-								else if ( version_compare( SUPERPWA_VERSION, $addon['pwapro_min_version'], '>=' ) ) {
+								else if ( version_compare( PWAPRO_VERSION, $addon['pwapro_min_version'], '>=' ) ) {
 									_e( '<span class="compatibility-compatible"><strong>Compatible</strong> with your version of PWA Pro</span>', 'pwa-pro' ); 
 								} 
 								else { 
@@ -209,7 +209,7 @@ function pwapro_addons_interface_render() {
 					
 					<?php if ( $pwapro_newsletter === true ) { ?>
 					
-						<div class="plugin-card plugin-card-pwapro-newsletter" style="background: #fdfc35 url('<?php echo SUPERPWA_PATH_SRC . 'admin/img/email.png'; ?>') no-repeat right top;">
+						<div class="plugin-card plugin-card-pwapro-newsletter" style="background: #fdfc35 url('<?php echo PWAPRO_PATH_SRC . 'admin/img/email.png'; ?>') no-repeat right top;">
 					
 							<div class="plugin-card-top" style="min-height: 178px;">
 							

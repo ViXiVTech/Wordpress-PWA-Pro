@@ -1,33 +1,34 @@
-=== Super Progressive Web Apps ===
-Contributors: arunbasillal, josevarghese, superpwa
+=== PWA Pro ===
+Contributors: arunbasillal, josevarghese, superpwa, ViXiV Technologies
 Donate link: http://millionclues.com/donate/
+Donate link: https://
 Tags: pwa, progressive web apps, manifest, web manifest, android app, chrome app, add to homescreen, mobile web
 Requires at least: 3.6.0
 Tested up to: 4.9.7
-Requires PHP: 5.3
+Requires PHP: 5.3+
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-SuperPWA helps you convert your WordPress website into a Progressive Web App instantly.
+PWA Pro helps create Progressive Web Apps out of Responsive Wordpress sites instantly.
 
 == Description ==
 
-Progressive Web Apps (PWA) is a new technology that combines the best of mobile web and the best of mobile apps to create a superior mobile web experience. They are installed on the phone like a normal app (web app) and can be accessed from the home screen. 
+Progressive Web Apps (PWA) is a new technology (2016) that combines the best of mobile web and the best of mobile apps to create a superior mobile web experience. They are installed on the phone like a normal app (web app) and can be accessed from the home screen. 
 
 Users can come back to your website by launching the app from their home screen and interact with your website through an app-like interface. Your return visitors will experience almost-instant loading times and enjoy the great performance benefits of your PWA!
 
-Super Progressive Web Apps makes it easy for you to convert your WordPress website into a Progressive Web App instantly!
+PWA Pro makes it easy for you to turn your WordPress website into a Progressive Web App instantly!
 
-Once SuperPWA is installed, users browsing your website from a supported mobile device will see a "Add To Home Screen" notice (from the bottom of the screen) and will be able to 'install your website' on the home screen of their device. Every page visited is stored locally on their device and will be available to read even when they are offline!
+Once PWA Pro is installed, users browsing your website from a supported mobile device will see a "Add To Home Screen" notice (from the bottom of the screen) and will be able to 'install your website' on the home screen of their device. Every page visited is stored locally on their device and will be available to read even when they are offline!
 
-SuperPWA is easy to configure, it takes less than a minute to set-up your Progressive Web App! SuperPWA does a clean uninstall, by removing every database entry and file that it creates. In fact, none of the default settings are saved to the database until you manually save it the first time. Go ahead and give it a try.
+PWA Pro is easy to configure, it takes less than a minute to set-up your Progressive Web App! PWA Pro does a clean uninstall, by removing every database entry and file that it creates. In fact, none of the default settings are saved to the database until you manually save it the first time. Go ahead and give it a try.
 
 And the best part? If you ever get stuck, we are here to watch your back! [Open a support](https://wordpress.org/support/plugin/super-progressive-web-apps) ticket if you have a question or need a feature. We are super excited to hear your feedback and we want to genuinely help you build the best Progressive Web App for your WordPress website!
 
 #### Quick Demo? 
 
-* Open up [SuperPWA.com](https://superpwa.com/?utm_source=wordpress.org&utm_medium=description-demo) in a supported device. 
+* Open up [ViXiV.net](https://vixiv.net) in a supported device. 
 * Add the website to your home screen either from the Add to Home Screen prompt (Chrome for Android) or from the browser menu. 
 * Open the app from your home screen and you will see the splash screen. 
 * Turn off your data and wifi to go offline and open up the app. You will still be able to see the app and browse the pages you have already visited. 
@@ -39,7 +40,7 @@ We are humbled by the feedback from the community. Thanks to everyone who believ
 
 ### What's in the box
 
-Here are the current features of Super Progressive Web Apps: 
+Here are the current features of PWA Pro: 
 
 * Generate a manifest for your website and add it to the head of your website.
 * Set the application icon for your Progressive Web App. 
@@ -53,13 +54,13 @@ Here are the current features of Super Progressive Web Apps:
 * New in version 1.2: Set the start page of your PWA.
 * New in version 1.2: Set Accelerated Mobile Pages (AMP) version of the start page. Supported plugins: AMP for WordPress, AMP for WP, Better AMP, AMP Supremacy, WP AMP.
 * New in version 1.3: Added support for high-quality splash screen. You can now set the 512x512 icon for the splash screen of your Progressive Web App.
-* New in version 1.3: Super Progressive Web Apps now accounts for content updates and will update the cache as you update the website. 
+* New in version 1.3: PWA Pro now accounts for content updates and will update the cache as you update the website. 
 * New in version 1.3: Improved in-browser service worker update handling.
 * New in version 1.4: You can now set the default orientation of your PWA. Choose from "any" (Follow Device Orientation), "Portrait" and "Landscape".
 * New in version 1.4: You can now set the theme_color property in the manifest.
 * New in version 1.5: OneSignal integration for Push notifications.
 * New in version 1.6: WordPress Multisite Network compatibility. 
-* New in version 1.7: Add-Ons for SuperPWA is here! Ships with [UTM Tracking Add-On](https://superpwa.com/addons/utm-tracking/?utm_source=wordpress.org&utm_medium=description) to track visits coming from your PWA.
+* New in version 1.7: Add-Ons for PWA Pro is here! Ships with [UTM Tracking Add-On](https://superpwa.com/addons/utm-tracking/?utm_source=wordpress.org&utm_medium=description) to track visits coming from your PWA.
 * New in version 1.8: Compatibility issues with OneSignal are now resolved! 
 * New in version 1.8: New Add-On: [Apple Touch Icons](https://superpwa.com/addons/apple-touch-icons/?utm_source=wordpress.org&utm_medium=description) that sets your app icons as Apple Touch Icons. 
 
@@ -82,20 +83,20 @@ The list is fast growing and is likely to be supported in most major browsers by
 #### WordPress Installation
 
 * Visit WordPress Admin > Plugins > Add New
-* Search for 'Super Progressive Web Apps'
-* Click "Install Now" and then "Activate" Super Progressive Web Apps
+* Search for 'PWA Pro'
+* Click "Install Now" and then "Activate" PWA Pro
 
 To install manually:
 
 * Upload super-progressive-web-apps folder to the /wp-content/plugins/ directory on your server
 * Go to WordPress Admin > Plugins
-* Activate Super Progressive Web Apps plugin from the list.
+* Activate PWA Pro plugin from the list.
 
 #### Customizing Your Progressive Web App
 
 Your Progressive Web App should be ready to test with the default settings on activation. You can customize it further and make it truly your own.
 
-* Go to WordPress Admin > SuperPWA
+* Go to WordPress Admin > PWA Pro
 * Set a Background Color for the splash screen to be shown when your PWA is opened on a mobile device.
 * Set the Application Icon. This will be the icon of your PWA when it is added to the homescreen in a mobile device. The icon must be a PNG image and exactly 192 x 192 pixels in size.
 * Set the Offline Page. This page will be displayed if the user is offline and the page he requested is not cached already. Ideally you should create a dedicated WordPress page and set it here. Within the page you create, you could add a note that reads, "It looks like you are offline and the page you requested is not available right now. Please check back again once you are online.". 
@@ -109,7 +110,7 @@ Your Progressive Web App should be ready to test with the default settings on ac
 * Click on it and your PWA will be added to your home screen. Wait for the install to complete. 
 * Go to your home screen and open your PWA. Browse into a few pages if you like. Close the App.
 * Disconnect from the internet and now open your PWA again. You should be able to see all the pages that you previously browsed. 
-* Try visiting a page that you did not visit before. You should see the page you set as your "Offline Page" in the settings of SuperPWA. 
+* Try visiting a page that you did not visit before. You should see the page you set as your "Offline Page" in the settings of PWA Pro. 
 
 #### Troubleshooting Your Progressive Web App
 
@@ -124,7 +125,7 @@ Uh, oh. Your PWA did not work as expected? You do not see the "Add to Home Scree
 
 ### Feature Requests, Issues, Pull Requests
 
-Here is our repository on [GitHub](https://github.com/SuperPWA/Super-Progressive-Web-Apps). Send us your pull requests, feature requests or issues, if any.
+Here is our repository on [GitHub](https://github.com/ViXiVTech/Wordpress-PWA-Pro). Send us your pull requests, feature requests or issues, if any.
 
 ### About us
 
@@ -140,7 +141,7 @@ To install this plugin:
 
 1. Install the plugin through the WordPress admin interface, or upload the plugin folder to /wp-content/plugins/ using FTP.
 2. Activate the plugin through the 'Plugins' screen in WordPress. 
-3. Go to WordPress Admin > SuperPWA
+3. Go to WordPress Admin > PWA Pro
 
 == Frequently Asked Questions ==
 
@@ -154,25 +155,25 @@ Just like you, we are eagerly awaiting the upcoming releases and we hope to see 
 
 = How To Customize Splash Screen = 
 
-You can easily change the icon and the background color in SuperPWA > Settings. 
+You can easily change the icon and the background color in PWA Pro > Settings. 
 
-Further customizations are not available right now, not because of any limitation of SuperPWA, but because they are not available in the PWA technology. When more options come up in the future, we will add them to SuperPWA then. 
+Further customizations are not available right now, not because of any limitation of PWA Pro, but because they are not available in the PWA technology. When more options come up in the future, we will add them to PWA Pro then. 
 
 = How To Track Visits Originating From Your Progressive Web App = 
 
-You can track visits from your PWA in your analytics software (for e.g. Google Analytics) using the UTM Tracking add-on of SuperPWA. Go to SuperPWA > Add-Ons and activate UTM Tracking. Then in SuperPWA > UTM Tracking, you can set the UTM parameters as needed. Please [refer the documentation](https://superpwa.com/addons/utm-tracking/?utm_source=wordpress.org&utm_medium=description-faq) for further information. 
+You can track visits from your PWA in your analytics software (for e.g. Google Analytics) using the UTM Tracking add-on of PWA Pro. Go to PWA Pro > Add-Ons and activate UTM Tracking. Then in PWA Pro > UTM Tracking, you can set the UTM parameters as needed. Please [refer the documentation](https://superpwa.com/addons/utm-tracking/?utm_source=wordpress.org&utm_medium=description-faq) for further information. 
 
 = GDPR Compliance =
 
-SuperPWA does not collect or store user data, nor does it set cookies or store tracking data. Content visited by users from your PWA is stored in the user's own device, in the cache of the browser. This is very similar to how modern browsers caches content offline for faster browsing. 
+PWA Pro does not collect or store user data, nor does it set cookies or store tracking data. Content visited by users from your PWA is stored in the user's own device, in the cache of the browser. This is very similar to how modern browsers caches content offline for faster browsing. 
 
-With the UTM Tracking Add-On, you will be able to differentiate the visits originating from your PWA in your analytics software. You may have to include this in your privacy policy. Please note that SuperPWA does not track the visits, we just help you add the UTM parameters to the URL of the Start Page of your app so that third party analytics tools can differentiate the visits. 
+With the UTM Tracking Add-On, you will be able to differentiate the visits originating from your PWA in your analytics software. You may have to include this in your privacy policy. Please note that PWA Pro does not track the visits, we just help you add the UTM parameters to the URL of the Start Page of your app so that third party analytics tools can differentiate the visits. 
 
 Feel free to get in touch if you have any questions. 
 
 == Screenshots ==
 
-1. Settings page in WordPress Admin > SuperPWA > Settings
+1. Settings page in WordPress Admin > PWA Pro > Settings
 
 == Changelog ==
 
@@ -183,7 +184,7 @@ Feel free to get in touch if you have any questions.
 * Enhancement: Added support for tagDiv AMP Plugin which ships with Newspaper theme and Newsmag theme. If you use this theme, you can now use AMP version of the start page. 
 * Enhancement: Added support for images in offline page. Images added to offline page are now cached during service worker activation. 
 * Enhancement: Improved the service worker installation routine to handle invalid entities in the service worker dependencies. 
-* Enhancement: SuperPWA is now translated to French, thanks to [@romainvincent](https://profiles.wordpress.org/romainvincent) and Spanish, thanks to [@arkangel](https://profiles.wordpress.org/arkangel/). 
+* Enhancement: PWA Pro is now translated to French, thanks to [@romainvincent](https://profiles.wordpress.org/romainvincent) and Spanish, thanks to [@arkangel](https://profiles.wordpress.org/arkangel/). 
 * Bug Fix: Fixed issue where translation files in /languages/ folder was not being loaded. 
 
 = 1.8.1 =
@@ -197,8 +198,8 @@ Feel free to get in touch if you have any questions.
 * New Add-On: Apple Touch Icons. Set the Application Icon and Splash Screen Icon as Apple Touch Icons for compatibility with iOS devices. 
 * Enhancement: Added support for Add to Home Screen prompt for Chrome 68 and beyond. 
 * Enhancement: Better add-on activation and deactivation by hooking onto admin_post action. 
-* Enhancement: Attempt to generate manifest and service worker automatically on visiting the SuperPWA settings page after adjusting root folder permissions. 
-* Enhancement: Generated a .pot file with all strings for translation. You can also translate SuperPWA to your language by visiting [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/super-progressive-web-apps) 
+* Enhancement: Attempt to generate manifest and service worker automatically on visiting the PWA Pro settings page after adjusting root folder permissions. 
+* Enhancement: Generated a .pot file with all strings for translation. You can also translate PWA Pro to your language by visiting [translate.wordpress.org](https://translate.wordpress.org/projects/wp-plugins/super-progressive-web-apps) 
 * Bug Fix: Compatibility issues with OneSignal are resolved for single installs. 
 * Bug Fix: Updated plugin action links and admin notices with the correct admin menu link. 
 
@@ -209,8 +210,8 @@ Feel free to get in touch if you have any questions.
 = 1.7 =
 * Date: [03.May.2018](https://superpwa.com/introducing-add-ons-for-superpwa/?utm_source=wordpress.org&utm_medium=changelog)
 * Minimum required WordPress version is now 3.6.0 (previously 3.5.0).
-* New Feature: Add-Ons for SuperPWA is here!
-* New Feature: SuperPWA is now a top-level menu to accommodate for the Add-Ons sub-menu page.
+* New Feature: Add-Ons for PWA Pro is here!
+* New Feature: PWA Pro is now a top-level menu to accommodate for the Add-Ons sub-menu page.
 * New Feature: Add UTM Tracking parameters to the Start URL with the [UTM Tracking Add-On](https://superpwa.com/addons/utm-tracking/?utm_source=wordpress.org&utm_medium=changelog).
 * Enhancement: Service worker URLs are now relative to accommodate for domain mapped Multisites.
 * Bug Fix: Incorrect start_url when WordPress is installed in a folder, or when inner pages are used as start_url.
@@ -218,7 +219,7 @@ Feel free to get in touch if you have any questions.
 
 = 1.6 =
 * Date: [23.April.2018](https://superpwa.com/1-6-released-multisite-network-support/?utm_source=wordpress.org&utm_medium=changelog)
-* New Feature: WordPress Multisite Network Compatibility. One of the most requested features for SuperPWA is now here! Thanks [@juslintek](https://wordpress.org/support/topic/add-manifest-json-support-for-multisite/#post-9998629) for doing a major share of the heavy lifting.
+* New Feature: WordPress Multisite Network Compatibility. One of the most requested features for PWA Pro is now here! Thanks [@juslintek](https://wordpress.org/support/topic/add-manifest-json-support-for-multisite/#post-9998629) for doing a major share of the heavy lifting.
 * New Feature: Added description to the manifest. You can now include a brief description of what your app is about. 
 * Enhancement: Moved manifest to the very top of wp_head for better compatibility with some browsers.
 * Enhancement: Improved the file and folder naming, organization, and inline documentation for better readability.
@@ -249,7 +250,7 @@ Feel free to get in touch if you have any questions.
 = 1.3 =
 * Date: 10.February.2018
 * New Feature: Added support for high-quality splash screen. You can now set the 512x512 icon for the splash screen of your Progressive Web App.
-* Enhancement: Super Progressive Web Apps now accounts for content updates and will update the cache as you update the website. 
+* Enhancement: PWA Pro now accounts for content updates and will update the cache as you update the website. 
 * Enhancement: Improved in-browser service worker update handling.
 * Enhancement: Added automatic upgrade of manifest and service worker on plugin upgrade.
 * Bug Fix: Only GET requests are served from the cache now. Fixes [this](https://wordpress.org/support/topic/errors-in-firefox-and-chrome/).
@@ -287,7 +288,7 @@ Feel free to get in touch if you have any questions.
 * Enhancement: Added support for tagDiv AMP Plugin which ships with Newspaper theme and Newsmag theme. If you use this theme, you can now use AMP version of the start page. 
 * Enhancement: Added support for images in offline page. Images added to offline page are now cached during service worker activation. 
 * Enhancement: Improved the service worker installation routine to handle invalid entities in the service worker dependencies. 
-* Enhancement: SuperPWA is now translated to French, thanks to @romainvincent and Spanish, thanks to @arkangel. 
+* Enhancement: PWA Pro is now translated to French, thanks to @romainvincent and Spanish, thanks to @arkangel. 
 * Bug Fix: Fixed issue where translation files in /languages/ folder was not being loaded. 
 
 = 1.8.1 =
@@ -299,8 +300,8 @@ Feel free to get in touch if you have any questions.
 * New Add-On: Apple Touch Icons. Set the Application Icon and Splash Screen Icon as Apple Touch Icons for compatibility with iOS devices. 
 * Enhancement: Added support for Add to Home Screen prompt for Chrome 68 and beyond. 
 * Enhancement: Better add-on activation and deactivation by hooking onto admin_post action. 
-* Enhancement: Attempt to generate manifest and service worker automatically on visiting the SuperPWA settings page after adjusting root folder permissions. 
-* Enhancement: Generated a .pot file with all strings for translation. You can also translate SuperPWA to your language by visiting translate.wordpress.org/projects/wp-plugins/super-progressive-web-apps 
+* Enhancement: Attempt to generate manifest and service worker automatically on visiting the PWA Pro settings page after adjusting root folder permissions. 
+* Enhancement: Generated a .pot file with all strings for translation. You can also translate PWA Pro to your language by visiting translate.wordpress.org/projects/wp-plugins/super-progressive-web-apps 
 * Bug Fix: Compatibility issues with OneSignal are resolved for single installs. 
 * Bug Fix: Updated plugin action links and admin notices with the correct admin menu link. 
 
@@ -309,15 +310,15 @@ Feel free to get in touch if you have any questions.
 
 = 1.7 =
 * Minimum required WordPress version is now 3.6.0 (previously 3.5.0).
-* New Feature: Add-Ons for SuperPWA is here!
-* New Feature: SuperPWA is now a top-level menu to accommodate for the Add-Ons sub-menu page.
+* New Feature: Add-Ons for PWA Pro is here!
+* New Feature: PWA Pro is now a top-level menu to accommodate for the Add-Ons sub-menu page.
 * New Feature: Add UTM Tracking parameters to the Start URL with the [UTM Tracking Add-On](https://superpwa.com/addons/utm-tracking/?utm_source=wordpress.org&utm_medium=upgrade-notice).
 * Enhancement: Service worker URLs are now relative to accommodate for domain mapped Multisites.
 * Bug Fix: Incorrect start_url when WordPress is installed in a folder, or when inner pages are used as start_url.
 * Bug Fix: Incorrect manifest and service worker URLs when WordPress is installed in a folder. 
 
 = 1.6 =
-* New Feature: WordPress Multisite Network Compatibility. One of the most requested features for SuperPWA is now here! Thanks [@juslintek](https://wordpress.org/support/topic/add-manifest-json-support-for-multisite/#post-9998629) for doing a major share of the heavy lifting.
+* New Feature: WordPress Multisite Network Compatibility. One of the most requested features for PWA Pro is now here! Thanks [@juslintek](https://wordpress.org/support/topic/add-manifest-json-support-for-multisite/#post-9998629) for doing a major share of the heavy lifting.
 * New Feature: Added description to the manifest. You can now include a brief description of what your app is about. 
 * Enhancement: Moved manifest to the very top of wp_head for better compatibility with some browsers.
 * Enhancement: Improved the file and folder naming, organization, and inline documentation for better readability.
@@ -344,7 +345,7 @@ Feel free to get in touch if you have any questions.
 
 = 1.3 =
 * New Feature: Added support for high-quality splash screen. You can now set the 512x512 icon for the splash screen of your Progressive Web App.
-* Enhancement: Super Progressive Web Apps now accounts for content updates and will update the cache as you update the website. 
+* Enhancement: PWA Pro now accounts for content updates and will update the cache as you update the website. 
 * Enhancement: Improved in-browser service worker update handling.
 * Enhancement: Added automatic upgrade of manifest and service worker on plugin upgrade.
 

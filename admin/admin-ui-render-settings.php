@@ -380,7 +380,7 @@ function pwapro_admin_interface_render() {
 	?>
 	
 	<div class="wrap">	
-		<h1>Super Progressive Web Apps <sup><?php echo SUPERPWA_VERSION; ?></sup></h1>
+		<h1>PWA Pro <sup><?php echo PWAPRO_VERSION; ?></sup></h1>
 		
 		<form action="options.php" method="post" enctype="multipart/form-data">		
 			<?php

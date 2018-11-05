@@ -47,6 +47,7 @@ if(deferredPrompt !== undefined) {
   }
         });
     }
+    /*
     if (!('showNotification' in ServiceWorkerRegistration.prototype)) {
         console.warn('[ViXiV] Notifications are not supported by this browser');
     }
@@ -59,6 +60,7 @@ if(deferredPrompt !== undefined) {
         });
         push_subscribe(vapid);
     }
+    */
 }
 
 function learn_page()
@@ -117,11 +119,13 @@ return cache_files;
         })
         .then(subscription => subscription)
         .catch(e => {
-            if (Notification.permission === 'denied') {
+/*          
+	    if (Notification.permission === 'denied') {
                 console.warn('Notifications Not Allowed By User!');
             } else {
                 console.error('Push Notifications Not Supported', e);
             }
+*/	    
         });
     }
 
